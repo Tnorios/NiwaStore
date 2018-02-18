@@ -1,0 +1,172 @@
+body {margin: 0px;padding-top:0;}
+body,html{
+  font-family:'Lato', sans-serif;
+  font-weight:normal;
+}
+article{
+  color:#515151;
+  max-width:90%;
+  width:1000px;
+  padding-top:4%;
+  margin: 0 auto ;
+  line-height:160%;}
+
+/*BASE CSS STYLE FOR RESPONSIVE MENU*/
+/*START*/
+#menu{
+/*Rev 140508*/
+  width:auto;
+  min-width:300px;
+  height: 55px;
+  margin:0 auto;
+  position:relative;
+  overflow:no-display;
+  /**/
+  color: #FFF;
+  background: #222;
+  border-bottom: 2px solid #222;
+}
+
+#menu ul,#menu li{
+  margin:0 auto;
+  padding:0 0;
+  list-style:none;
+}
+
+.logo{
+  height: 50px;
+}
+
+li img {
+  display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+}
+
+
+#menu ul{
+  height:45px;
+  width:100%}
+#menu li{
+	float:left;
+	display:inline;
+	position:relative;
+  font:0.9em 'Lato', sans-serif;
+  /*font-weight:700;*/
+}
+#menu a{/*main menu*/
+	display: block;
+  font-size:120%;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #dedede;
+}
+#menu li a:hover{
+  color:#fff;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+
+}
+#menu input{display:none;margin:0 0;padding:0 0;width:80px;height:30px;opacity:0;cursor:pointer
+}
+#menu label{
+	font:normal 20px Arial;
+  display:none;
+  width:35px;
+  height:36px;
+  line-height:36px;
+  text-align:center;
+  float:right;
+  
+}
+
+/*BRAND*/
+#menu label span{font-size:80%;position:absolute;left:35px;}
+#menu ul.menus{/*SUBMENUS*/
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #383838;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.menus li{
+display: block;
+width: 100%;
+font:normal 100% Arial;
+text-transform: none;
+text-shadow: none;
+}
+
+#menu ul.menus a{
+color: #FFF;
+line-height: 40px;  /*REV*/
+  -webkit-transition: all .6s ease-in-out;
+-moz-transition: all .6s ease-in-out;
+-ms-transition: all .6s ease-in-out;
+-o-transition: all .6s ease-in-out;
+transition: all .6s ease-in-out;
+}
+
+#menu li:hover ul.menus{display:block;}
+#menu ul.menus a:hover{
+  
+background: #bebebe;
+color: #222;
+-webkit-transition: all .1s ease-in-out;
+-moz-transition: all .1s ease-in-out;
+-ms-transition: all .1s ease-in-out;
+-o-transition: all .1s ease-in-out;
+transition: all .1s ease-in-out;
+}
+/*END*/
+/*BASE CSS STYLE FOR RESPONSIVE MENU*/
+/**/
+/*MOBIL VERSION, 0 > 600px*/
+@media screen and (max-width: 600px){
+  #menu{
+    position:relative;
+    color:#fff;  
+    background:#222;
+    border-bottom: 0px solid #222;  
+  }
+
+#menu ul{
+  top:100%;
+  left:0;
+  height:auto;
+  display:none;
+  position:absolute;
+  z-index:3;
+  background:#555;
+  }
+#menu ul.menus{
+  width:100%;
+  position:static;
+  padding-left:0px;
+}
+#menu li{
+  font:normal 90% Arial;
+  width:auto; 
+  display:block;
+  float:none;
+}
+#menu input,#menu label{
+  margin:0  2%;
+  float:right;  
+  display:block;  
+  position:absolute;
+}
+#menu input{z-index:4;}
+#menu input:checked + label{color:#fff}
+#menu input:checked ~ ul{display:block}
+}
+/*End Media Queries*/
+/*End CSS*/

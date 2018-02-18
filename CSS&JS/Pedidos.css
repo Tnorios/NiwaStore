@@ -1,0 +1,90 @@
+body { padding-top: 50px; }
+.content {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  background-color: #000;
+  color: #fff;
+}
+@media (min-width : 768px) { 
+  body::before { 
+  }
+}
+@media (min-width : 992px) { 
+  body::before { 
+  }
+}
+@media (min-width : 1200px) { 
+  body::before { 
+  }
+}
+
+.click-target{
+
+}
+
+#miyazaki { 
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-family: Agenda-Light, sans-serif;
+  font-weight: 100; 
+  background: #333; color: #fff;
+  text-rendering: optimizeLegibility;
+  border-radius: 5px; 
+
+}
+
+table#miyazaki tbody .last{
+  color:black;
+  background: #cccccc;
+  font-weight: bold;
+
+}
+
+#miyazaki thead th { font-weight: 600; cursor: pointer; width: 10%}
+#miyazaki thead th, table#miyazaki tbody td { 
+  padding: .8rem; font-size: 1.4rem;
+  width: 10%
+
+
+}
+table#miyazaki tbody td { 
+  padding: .8rem; font-size: 1.4rem;
+  color: gray; background: #999999; 
+  font-family: Agenda-Light, sans-serif;
+  font-weight: 100; 
+  background: #999999; color: #fff;
+  text-rendering: optimizeLegibility;
+
+
+
+}
+table#miyazaki tbody tr:not(:last-child) { 
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; 
+
+}
+
+@media screen and (max-width: 600px) {
+  table#miyazaki caption { background-image: none; }
+  table#miyazaki thead { display: none; }
+  table#miyazaki tbody td { 
+    display: block; padding: .6rem; 
+  }
+  table#miyazaki tbody tr td:first-child { 
+    background: #666; color: #fff; 
+  }
+  table#miyazaki tbody td:before { 
+    content: attr(data-th); 
+    font-weight: bold;
+    display: inline-block;
+    width: 6rem;  
+  }
+}
